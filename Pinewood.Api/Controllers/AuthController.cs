@@ -92,9 +92,9 @@ namespace Pinewood.Api.Controllers
                 var claimsPrincipal = tokenHandler.ValidateToken(token, new TokenValidationParameters
                 {
                     ValidateIssuer = true,
-                    ValidIssuer = "Pinewood",
+                    ValidIssuer = _configuration["Jwt:Issuer"],
                     ValidateAudience = true,
-                    ValidAudience = "dotnetapp",
+                    ValidAudience = _configuration["Jwt:Audience"],
                     ValidateLifetime = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuerSigningKey = true,
