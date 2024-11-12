@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+<div id="loginForm">
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required />
+    <br />
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required />
+    <br />
+    <button id="loginButton">Login</button>
+</div>
+
+<div id="responseMessage"></div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#loginButton").click(function (e) {
+                e.preventDefault();
+
+                var loginRequest = {
+                    email: $("#email").val(),
+                    password: $("#password").val()
+                };
+
+                $.ajax({
+                    url: '/Login/Authenticate',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(loginRequest),
+                    success: function (response) {
+                        $("#responseMessage").text("Login successful! Will redirect in 5 seconds...");
+                        setTimeout(function () {
+                            window.location.href = "/";
+                        }, 5000);
+                    },
+                    error: function (xhr) {
+                        $("#responseMessage").text("Login failed: " + xhr.responseJSON.message);
+                    }
+                });
+            });
+        });
+    </script>
+}
