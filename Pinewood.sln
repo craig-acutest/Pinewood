@@ -5,7 +5,9 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pinewood.Api", "Pinewood.Api\Pinewood.Api.csproj", "{5474BBF6-7048-42CF-A903-027063C01DCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinewood", "Pinewood\Pinewood.csproj", "{46176F65-58A3-4C17-9767-FF5AA79E2661}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pinewood", "Pinewood\Pinewood.csproj", "{46176F65-58A3-4C17-9767-FF5AA79E2661}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinewood.Api.Tests", "Pinewood.Api.Tests\Pinewood.Api.Tests.csproj", "{D713C494-878F-45DB-BF80-8B8F95277B6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{46176F65-58A3-4C17-9767-FF5AA79E2661}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46176F65-58A3-4C17-9767-FF5AA79E2661}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46176F65-58A3-4C17-9767-FF5AA79E2661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D713C494-878F-45DB-BF80-8B8F95277B6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D713C494-878F-45DB-BF80-8B8F95277B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D713C494-878F-45DB-BF80-8B8F95277B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D713C494-878F-45DB-BF80-8B8F95277B6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
